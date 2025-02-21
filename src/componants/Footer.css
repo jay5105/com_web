@@ -1,0 +1,73 @@
+.footer {
+    background-color: #3B5378;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer .contact-info, .footer-links, .services, .other-links {
+    flex: 1;
+    text-align: left;
+    padding: auto;
+    /* margin: 39px 21px 46px 18px; */
+    /* 39px 21px 46px 18px; */
+}
+.footlogo {
+    width: 240px;
+    height: 45px;
+}
+
+.footer .contact-info h3 {
+    font-weight: bold;
+    /* padding-top: 5px; */
+    padding-bottom: 5px;
+}
+
+.footer .contact-info p, .footer-links a, .services a, .other-links a {
+    margin: 5px 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons {
+    display: flex;
+    /* justify-content: center; */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .social-icons svg {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer .social-icons svg:hover {
+    color: #ccc;
+}
+
+.comlogo {
+    width: 240px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer .copyright {
+    text-align: left;
+    margin-top: 2px;
+}

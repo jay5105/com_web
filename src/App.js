@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './componants/Header';
+import Footer from './componants/Footer';
+import PrinceIT from './componants/Heropage';
+import CombinedSection from './componants/StatsSection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ margin: 0, padding: 0 }}>
+      <Navbar />  
+      <PrinceIT />
+      <CombinedSection />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,31 @@
+.stat-card {
+    background: #ffffff;
+    border-radius: 16px; /* Slightly larger rounded corners to match screenshot */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-icon {
+    width: 60px; /* Matches 60px × 60px as requested */
+    height: 60px; /* Matches 60px × 60px as requested */
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circular shape */
+  }
+  
+  .overview-image {
+    width: 100%;
+    max-width: 400px; /* Adjust based on screenshot size */
+    height: auto;
+    border-radius: 8px; /* Optional: slight rounding for consistency */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  }
