@@ -1,0 +1,83 @@
+.technologies-section {
+    padding: 40px;
+    background-color: #f5faff; /* Light blue background from the image */
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .section-title {
+    color: #1e90ff; /* Blue title */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .section-description {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tech-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px; /* Increased gap for horizontal spacing */
+    padding: 20px;
+  }
+  
+  .tech-category {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .category-title {
+    color: #1e90ff; /* Blue category titles */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1e90ff; /* Blue underline */
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .tech-icon {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .tech-image {
+    width: 40px; /* Adjust size as needed to match your icons */
+    height: 40px; /* Adjust size as needed */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e90ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10;
+  }

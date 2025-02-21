@@ -4,6 +4,7 @@ import Navbar from './componants/Header';
 import Footer from './componants/Footer';
 import PrinceIT from './componants/Heropage';
 import CombinedSection from './componants/StatsSection';
+import TechnologiesSection from './componants/TechnologiesSection';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />  
       <PrinceIT />
       <CombinedSection />
+      <TechnologiesSection />
       <Footer />
     </div>
   );
