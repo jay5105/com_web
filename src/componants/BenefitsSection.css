@@ -1,0 +1,86 @@
+.benefits-section {
+    padding: 40px;
+    background-color: #f5faff; /* Light blue background from the image */
+    font-family: 'Roboto', Arial, sans-serif; /* Changed to Roboto with fallback */
+    text-align: center;
+  }
+  
+  /* Ensure Roboto is loaded (add to your index.html or use a CDN) */
+  /* <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> */
+  
+  .section-title {
+    color: #1e90ff; /* Blue title */
+    font-size: 2.7rem; /* Increased from 2.5rem by 2px (assuming 1rem = 16px) */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #4caf50; /* Green underline */
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .benefit-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .benefit-card.hovered {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .benefit-icon {
+    width: 60px; /* Adjust size as needed to match your icons */
+    height: 60px; /* Adjust size as needed */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+    margin-bottom: 15px;
+  }
+  
+  .benefit-title {
+    color: #1e90ff; /* Blue title */
+    font-size: 1.7rem; /* Increased from 1.5rem by 2px */
+    margin-bottom: 10px;
+  }
+  
+  .benefit-description {
+    color: #333;
+    font-size: 1.2rem; /* Increased from 1rem by 2px */
+    line-height: 1.5;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .benefits-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .benefit-card {
+      max-width: 300px;
+    }
+  
+    .section-title {
+      font-size: 2.3rem; /* Slightly smaller for mobile, but still increased by 2px from original */
+    }
+  
+    .benefit-title {
+      font-size: 1.5rem; /* Slightly smaller for mobile, but still increased by 2px from original */
+    }
+  
+    .benefit-description {
+      font-size: 1rem; /* Slightly smaller for mobile, but still increased by 2px from original */
+    }
+  }

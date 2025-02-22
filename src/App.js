@@ -5,6 +5,9 @@ import Footer from './componants/Footer';
 import PrinceIT from './componants/Heropage';
 import CombinedSection from './componants/StatsSection';
 import TechnologiesSection from './componants/TechnologiesSection';
+import BenefitsSection from './componants/BenefitsSection';
+import ServiceSection from './componants/ServiceSection';
+import IndustriesSection from './componants/IndustriesSection';
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <PrinceIT />
       <CombinedSection />
       <TechnologiesSection />
+      <BenefitsSection />
+      <ServiceSection />
+      <IndustriesSection />
       <Footer />
     </div>
   );

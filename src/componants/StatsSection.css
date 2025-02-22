@@ -13,8 +13,8 @@
   }
   
   .stat-icon {
-    width: 60px; /* Matches 60px × 60px as requested */
-    height: 60px; /* Matches 60px × 60px as requested */
+    width: 80px; /* Matches 60px × 60px as requested */
+    height: 80px; /* Matches 60px × 60px as requested */
     margin: 0 auto 15px;
     display: flex;
     align-items: center;

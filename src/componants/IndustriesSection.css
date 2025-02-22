@@ -1,0 +1,117 @@
+.industries-section {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #f5f7fa; /* Light gray background as in the design */
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+  }
+  
+  .section-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    color: #3498db; /* Blue text for "We Serve All Industries" */
+  }
+  
+  .section-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #27ae60; /* Green underline */
+    transform: translateX(-50%);
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cards per row on desktop */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .industry-card {
+    background: #ffffff;
+    border-radius: 20px; /* Rounded corners as in the design */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .industry-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  /* Specific background colors for each industry card to match the design */
+  .banking-finance { background-color: #fff0f0; } /* Light red */
+  .hotel-restaurants { background-color: #fff0f5; } /* Light pink */
+  .retail-ecommerce { background-color: #fef9e7; } /* Light yellow */
+  .media-entertainment { background-color: #f0fff0; } /* Light green */
+  .logistic { background-color: #e6f3ff; } /* Light blue */
+  .manufacturing { background-color: #fff5e6; } /* Light orange */
+  .energy { background-color: #e6ffe6; } /* Light green */
+  .lifestyle-industry { background-color: #ffe6f0; } /* Light pink */
+  .real-estate { background-color: #f0f8ff; } /* Light blue */
+  .education { background-color: #e6f7ff; } /* Light blue */
+  .fitness { background-color: #fff0f5; } /* Light pink */
+  .travel-tourism { background-color: #f0fff0; } /* Light green */
+  .sport { background-color: #e6ffe6; } /* Light green */
+  .healthcare { background-color: #ffe6f0; } /* Light pink */
+  
+  .industry-icon {
+    width: 40px; /* Adjust based on your icon size */
+    height: 40px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .industry-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-header h1 {
+      font-size: 2rem;
+    }
+  
+    .section-header h1::after {
+      width: 30px;
+    }
+  
+    .industries-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Stack cards on mobile */
+    }
+  
+    .industry-icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .industry-card p {  
+      font-size: 0.9rem;
+    }
+  }
