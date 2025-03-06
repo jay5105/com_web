@@ -1,104 +1,130 @@
-/* Navbar container */
 .navbar {
-    background-color: white;
-    padding: 10px 0;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for more visibility */
-    transition: all 0.3s ease-in-out; /* Smooth transition for sticky effect */
-    position: fixed; /* Make it fixed by default for the sticky effect */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-  }
-  
-  /* Sticky navbar class */
-  .sticky {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Same shadow, but explicitly set for sticky state */
-    background-color: white; /* Ensure background remains white when sticky */
-  }
-  
-  /* Flexbox for alignment */
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Logo */
-  .navbar-logo img {
-    width: 240px;
-    height: 45px;
-  }
-  
-  /* Navbar menu */
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-  }
-  
-  /* Navbar links */
-  .navbar-links {
-    color: #37517E;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Active link (Home) */
-  .navbar-links.active {
-    color: #37517E;
-  }
-  
-  /* Hover effect */
-  .navbar-links:hover {
-    color: #f1c40f;
-  }
-  
-  /* Dropdown styling */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background: white;
-    top: 30px;
-    left: 0;
-    list-style: none;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu li {
-    padding: 5px 10px;
-  }
-  
-  .dropdown-menu li a {
-    text-decoration: none;
-    color: #37517E;
-  }
-  
-  /* Contact Us button */
-  .contact-btn {
-    background-color: #37517E;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .contact-btn:hover {
-    background-color: #2a3e5e;
-  }
+  background-color: #fff; /* White background */
+  padding: 12px 0; /* Vertical padding */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  position: relative; /* Ensure positioning context for shadow */
+  z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar .container {
+  max-width: auto; /* Match the width in the image */
+  margin: 10px 200px 10px 200px;
+  padding: 0; /* No side padding */
+  display: flex;
+  justify-content: space-between; /* Logo on the left, menu-right on the right */
+  align-items: center;
+}
+
+.navbar .logo .nav-logo {
+  width: 240px; /* Same size as in the footer */
+  height: 45px;
+}
+
+.navbar .menu-right {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adjusted space between nav-links and contact-button */
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 5px 41px 5px  60px;
+  gap: 65px; /* Reduced gap for a more compact look */
+}
+
+.navbar .nav-links li {
+  position: relative; /* For dropdown positioning */
+}
+
+.navbar .nav-links a {
+  color: #333; /* Dark text color */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar .nav-links a.active {
+  text-decoration: underline; /* Underline for active link */
+}
+
+.navbar .nav-links .dropdown {
+  position: relative;
+}
+
+.navbar .nav-links .dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links .dropdown:hover .dropdown-toggle {
+  color: #28a745; /* Green color on hover, matching the image */
+}
+
+.navbar .nav-links .dropdown .dropdown-icon {
+  margin-left: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.navbar .nav-links .dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.navbar .nav-links .dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Updated shadow for dropdown */
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  width: 250px; /* Fixed width to match the image */
+  border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+  z-index: 1000;
+}
+
+.navbar .nav-links .dropdown-menu li {
+  padding: 0;
+}
+
+.navbar .nav-links .dropdown-menu a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333; /* Updated text color */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links .dropdown-menu a:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.navbar .nav-links .dropdown-menu .dropdown-item-icon {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.navbar .contact-button .btn {
+  background-color: #3B5378; /* Dark blue background to match footer */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.navbar .contact-button .btn:hover {
+  background-color: #2a3e5a; /* Slightly darker on hover */
+}

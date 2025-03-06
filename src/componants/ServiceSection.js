@@ -1,47 +1,71 @@
 import React from 'react';
 import './ServiceSection.css';
 import WebDevelopment from './img/service-web-development.webp';
-import UIUX from './img/service-ui-ux-design.webp';
+import UIDesign from './img/service-ui-ux-design.webp';
 import DigitalMarketing from './img/service-digital-marketing.webp';
-import AppDevelopment from './img/service-mobile-app.webp';
-import DigitalWorld from './img/digital-world.webp';
+import MobileApp from './img/service-mobile-app.webp';
+import WorkplaceIllustration from './img/ourservices/5.png';
+
+const ServiceCard = ({ title, description, image }) => (
+  <div className="service-card">
+    <div className="service-icon">
+      <img src={image} alt={`${title} icon`} />
+    </div>
+    <h3>{title}</h3>
+    <p className="service-description">{description}</p>
+  </div>
+);
 
 const ServiceSection = () => {
   return (
     <div className="service-section">
-      <header className="section-header">
-        <h1>Our Services</h1>
+      {/* Our Services Section */}
+      <div className="services-header">
+        <h2>OUR SERVICES</h2>
         <p>Delivering tailored technology solutions to empower your business.</p>
-      </header>
-      <div className="services-grid">
-        <div className="service-card">
-          <img src={WebDevelopment} alt="Web Development" className="service-icon" />
-          <h3>Web Development</h3>
-          <p>Our team of experienced web developers creates fast, scalable, and SEO-friendly websites tailored to meet your business goals. We ensure responsive design, clean code, and optimal user experience.</p>
-        </div>
-        <div className="service-card">
-          <img src={UIUX} alt="UI/UX Design" className="service-icon" />
-          <h3>UI/UX Design</h3>
-          <p>We provide innovative UI/UX design solutions with our expert team here to help. Let’s take the next step together and make your vision a reality.</p>
-        </div>
-        <div className="service-card">
-          <img src={DigitalMarketing} alt="Digital Marketing" className="service-icon" />
-          <h3>Digital Marketing</h3>
-          <p>Boost your online presence with our comprehensive digital marketing solutions. We specialize in SEO, PPC, social media marketing, content marketing, and increase conversions.</p>
-        </div>
-        <div className="service-card">
-          <img src={AppDevelopment} alt="App Development" className="service-icon" />
-          <h3>App Development</h3>
-          <p>We develop high-performance apps tailored to your needs, ensuring a seamless and engaging user experience.</p>
-        </div>
       </div>
-      <div className="call-to-action">
-        <div className="cta-content">
-          <h2>Ready To Transform Your Digital World?</h2>
-          <p>At Prince IT Solution, we are committed to driving your business forward with innovative technology solutions. Whether you're looking to enhance your website, develop a new app, or improve your digital marketing strategy, our expert team is here to help. Let’s take the next step together and make your vision a reality.</p>
-          <button className="cta-button">Get in Touch</button>
+      <div className="services-grid">
+        <ServiceCard
+          title="Web Development"
+          description="Our team of seasoned professionals..."
+          image={WebDevelopment}
+        />
+        <ServiceCard
+          title="UI/UX Design"
+          description="We offer customized IT solutions..."
+          image={UIDesign}
+        />
+        <ServiceCard
+          title="Digital Marketing"
+          description="We specialize in crafting custom, responsive websites and web applications that enhance your online presence. Our expert team delivers innovative and scalable solutions tailored to your business needs."
+          image={DigitalMarketing}
+        />
+        <ServiceCard
+          title="Mobile App Development"
+          description="We believe in building long term..."
+          image={MobileApp}
+        />
+      </div>
+
+      {/* We Do As an Enterprise Software Company Section */}
+      <div className="enterprise-section">
+        <div className="enterprise-image">
+          <img
+            src={WorkplaceIllustration}
+            alt="Professional working at desk"
+            width="630"
+            height="419"
+          />
         </div>
-        <img src={DigitalWorld} alt="Digital Transformation Illustration" className="illustration" />
+        <div className="enterprise-content">
+          <h2>We Do As an Enterprise Software Company</h2>
+          <h3>
+            Prince IT Solution – An Enterprise Software Company, has expertise in
+            key technological domains. Over the decade, we have been servicing
+            our clients in a very significant area of many business models.
+          </h3>
+          <p className="phone-number">630-419.9</p>
+        </div>
       </div>
     </div>
   );

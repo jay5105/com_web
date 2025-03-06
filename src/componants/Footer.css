@@ -1,73 +1,129 @@
 .footer {
-    background-color: #3B5378;
-    color: white;
-    padding: 40px 0;
+    background-color: #fff; /* White background for the main footer area */
+    color: #333; /* Dark text color for content */
+    padding: 40px 0 0; /* Padding for the top, bottom padding handled by footer-bottom */
+    font-family: Arial, sans-serif;
 }
 
 .footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: auto;
+    margin: 10px 200px 30px 200px;
+    padding: 50px; /* No padding on the sides */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 10px; /* Minimal gap between sections */
 }
 
-.footer .contact-info, .footer-links, .services, .other-links {
-    flex: 1;
-    text-align: left;
-    padding: auto;
-    /* margin: 39px 21px 46px 18px; */
-    /* 39px 21px 46px 18px; */
+.footer .contact-info {
+    flex: 2; /* Make "Get into Touch" section wider */
+    min-width: 300px; /* Ensure it doesn't collapse too much on smaller screens */
+    margin: 0; /* No margins, spacing handled by gap */
 }
+
+.footer .footer-links,
+.footer .services,
+.footer .other-links {
+    flex: 1; /* Other sections are narrower */
+    min-width: 150px; /* Reduced min-width for a more compact look */
+    margin: 0; /* No margins, spacing handled by gap */
+}
+
 .footlogo {
     width: 240px;
     height: 45px;
+    margin-bottom: 20px;
 }
 
-.footer .contact-info h3 {
+.footer .contact-info h3,
+.footer-links h3,
+.services h3,
+.other-links h3 {
     font-weight: bold;
-    /* padding-top: 5px; */
-    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
 }
 
-.footer .contact-info p, .footer-links a, .services a, .other-links a {
-    margin: 5px 0;
-    display: block;
-    color: white;
+.footer .contact-info h4 {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer .contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 8px 0; /* Reduced vertical spacing */
+    font-size: 14px;
+    color: #555;
+}
+
+.footer .contact-info p .icon {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-links ul,
+.services ul,
+.other-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.services ul li,
+.other-links ul li {
+    margin: 6px 0; /* Reduced vertical spacing between list items */
+}
+
+.footer-links a,
+.services a,
+.other-links a {
+    color: #555;
     text-decoration: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 14px;
 }
 
-.footer a:hover {
+.footer-links a:hover,
+.services a:hover,
+.other-links a:hover {
     text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #3B5378; /* Dark blue background for the bottom section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: auto; /* Slightly less than container to account for rounded corners */
+    margin: 30px 200px 10px 200px;
+    padding: 15px 20px; /* Small padding for content, but no side spacing */
+    border-radius: 20px; /* Rounded corners to match the image */
+}
+
+.footer .copyright {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
 }
 
 .footer .social-icons {
     display: flex;
-    /* justify-content: center; */
     gap: 15px;
-    margin-top: 20px;
 }
 
-.footer .social-icons svg {
+.footer .social-icons .social-icon {
     font-size: 20px;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
-.footer .social-icons svg:hover {
+.footer .social-icons .social-icon:hover {
     color: #ccc;
-}
-
-.comlogo {
-    width: 240px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.footer .copyright {
-    text-align: left;
-    margin-top: 2px;
 }

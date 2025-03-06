@@ -1,58 +1,70 @@
-import React, { useState, useEffect } from "react";
-import comlogo from "./img/comlogo.webp";
-import "./Navbar.css";
+import React from 'react';
+import { FaAngleDown, FaLaptopCode, FaMobileAlt, FaPaintBrush, FaHeadset, FaBullhorn, FaCheckSquare, FaCloud } from 'react-icons/fa'; // Icons for dropdown items
+import './Navbar.css';
+import footlogo from "./img/comlogo.webp";
 
 const Navbar = () => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Check if the user has scrolled down (or up), and make the navbar sticky
-      const scrollY = window.scrollY;
-      setIsSticky(scrollY > 0); // Make navbar sticky when scroll position is greater than 0
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <div className="navbar-container">
-        {/* Logo */}
-        <a href="/" className="navbar-logo">
-          <img src={comlogo} alt="Prince IT Solution" className="logo" />
-        </a>
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">
+          <img src={footlogo} alt="Prince IT Solution Logo" className="nav-logo" />
+        </div>
 
-        {/* Navbar Items */}
-        <ul className="navbar-menu">
-          <li className="navbar-item">
-            <a href="/" className="navbar-links active">Home</a>
-          </li>
-          <li className="navbar-item">
-            <a href="/about" className="navbar-links">About</a>
-          </li>
+        <div className="menu-right">
+          <ul className="nav-links">
+            <li><a href="/" className="active">Home</a></li>
+            <li><a href="/about.php">About</a></li>
+            <li className="dropdown">
+              <a href="/services/web-development.php" className="dropdown-toggle">
+                Services <FaAngleDown className="dropdown-icon" />
+              </a>
+              {/* Dropdown menu (hidden by default, shown on hover) */}
+              <ul className="dropdown-menu">
+                <li>
+                  <a href="/services/web-development.php">
+                    <FaLaptopCode className="dropdown-item-icon" /> Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/app-development.php">
+                    <FaMobileAlt className="dropdown-item-icon" /> Mobile App Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/ui-ux-design.php">
+                    <FaPaintBrush className="dropdown-item-icon" /> UI/UX Design
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/support.php">
+                    <FaHeadset className="dropdown-item-icon" /> Support & Maintenance
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/digital-marketing.php">
+                    <FaBullhorn className="dropdown-item-icon" /> Digital Marketing & SEO
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/qa-testing.php">
+                    <FaCheckSquare className="dropdown-item-icon" /> QA & Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/cloud-devops.php">
+                    <FaCloud className="dropdown-item-icon" /> Cloud & DevOps
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/blogs.php">Blogs</a></li>
+          </ul>
 
-          {/* Services Dropdown */}
-          <li className="navbar-item dropdown">
-            <a href="/services" className="navbar-links">
-              Services <span className="dropdown-icon">▾</span> {/* Thinner down arrow */}
-            </a>
-            <ul className="dropdown-menu">
-              <li><a href="/services/web">Web Development</a></li>
-              <li><a href="/services/app">App Development</a></li>
-              <li><a href="/services/design">UI/UX Design</a></li>
-            </ul>
-          </li>
-
-          {/* Contact Us Button */}
-          <li className="navbar-item">
-            <a href="/contact" className="contact-btn">Contact Us</a>
-          </li>
-        </ul>
+          <div className="contact-button">
+            <a href="/contact.php" className="btn">Contact Us</a>
+          </div>
+        </div>
       </div>
     </nav>
   );

@@ -1,0 +1,273 @@
+/* Right Side: Slider for Phone Images */
+.hero-image {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+  }
+  
+  .phone-slider {
+    width: 100%;
+    height: 562.8px; /* Match screenshot height */
+  }
+  
+  .slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phone-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1; /* Ensure image is above the text overlay */
+  }
+  
+  /* Circular Background (from screenshot) */
+  .slide-content::before {
+    content: '';
+    position: absolute;
+    width: 350px; /* Adjusted to match screenshot */
+    height: 350px;
+    background-color: #3B5378; /* Dark blue from your theme */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Below the phone image */
+  }
+  
+  /* Text Overlay with Animation */
+  .slide-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* Above the image */
+    width: 80%;
+  }
+  
+  .slide-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+  }
+  
+  .slide-subheading {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards 0.2s; /* Delayed start */
+  }
+  
+  .slide-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #3B5378;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards 0.4s; /* Delayed start */
+  }
+  
+  .slide-cta-btn .arrow {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  .slide-cta-btn:hover {
+    background-color: #2a3e5a;
+  }
+  
+  /* Animation for Text Elements */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Decorative Circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #3B5378;
+    opacity: 0.2;
+  }
+  
+  .circle-1 {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
+  
+  .circle-2 {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .circle-3 {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    left: 50px;
+  }
+  
+  .circle-4 {
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Rest of your CSS */
+  .hero {
+    background-color: #fff;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero .container {
+    margin: 10px 260px 10px 260px;
+    padding: 0;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Left Side: Text and Button */
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .hero-text .subheading span {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .hero-text .subheading span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #3B5378;
+  }
+  
+  .hero-text .consult-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #3B5378;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-text .consult-btn .arrow {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  .hero-text .consult-btn:hover {
+    background-color: #2a3e5a;
+  }
+  
+  /* Trusted by Clients Section */
+  .trusted-clients {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .trusted-clients .trusted-text {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .trusted-clients .trusted-text .icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .trusted-clients .rating {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .trusted-clients .rating .star {
+    color: #FFD700;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  
+  .hero-text .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Client Logos (At the Bottom) */
+  .client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .client-logos img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
