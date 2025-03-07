@@ -64,7 +64,6 @@ const ServiceSection = () => {
             key technological domains. Over the decade, we have been servicing
             our clients in a very significant area of many business models.
           </h3>
-          <p className="phone-number">630-419.9</p>
         </div>
       </div>
     </div>

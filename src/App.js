@@ -8,6 +8,7 @@ import WhyPrinceIT from './componants/WhyPrinceIT';
 import ServiceSection from './componants/ServiceSection';
 import ApproachSection from './componants/ApproachSection';
 import TechnologiesSection from './componants/TechnologiesSection';
+import BlogAndContactSection from './componants/BlogAndContactSection';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <ServiceSection />
       <ApproachSection />
       <TechnologiesSection />
-      {/* <Footer /> */}
+      <BlogAndContactSection />
+      <Footer />
     </div>
   );
 }
