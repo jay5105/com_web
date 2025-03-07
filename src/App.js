@@ -9,18 +9,20 @@ import ServiceSection from './componants/ServiceSection';
 import ApproachSection from './componants/ApproachSection';
 import TechnologiesSection from './componants/TechnologiesSection';
 import BlogAndContactSection from './componants/BlogAndContactSection';
+import PurposeAndFutureSection from './componants/PurposeAndFutureSection';
 
 function App() {
   return (
     <div className="App" style={{ margin: 0, padding: 0 }}>
       <Navbar />  
-      <Hero />
-      <WhyPrinceIT />
-      <ServiceSection />
-      <ApproachSection />
-      <TechnologiesSection />
-      <BlogAndContactSection />
-      <Footer />
+      {/* <Hero /> */}
+      {/* <WhyPrinceIT /> */}
+      {/* <ServiceSection /> */}
+      {/* <ApproachSection /> */}
+      {/* <TechnologiesSection /> */}
+      {/* <BlogAndContactSection /> */}
+      {/* <Footer /> */}
+      <PurposeAndFutureSection />
     </div>
   );
 }
