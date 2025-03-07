@@ -26,8 +26,23 @@ import afterEffectsIcon from './img/ui-4.webp';
 import sketchIcon from './img/ui-5.webp';
 import canvaIcon from './img/ui-6.webp';
 
+// Import the map image
+import mapBackground from './img/Page-1.png'; // Adjust the path to your map image
+
+// Import client images
+import clientImage1 from './img/alexander-hipp-iEEBWgY_6lA-unsplash.png'; // Adjust paths
+import clientImage2 from './img/alexander-hipp-iEEBWgY_6lA-unsplash.png';
+import clientImage3 from './img/alexander-hipp-iEEBWgY_6lA-unsplash.png';
+
+// Import journey section icons
+import trophyIcon from './img/Mask1.png'; // Adjust paths
+import itExpertIcon from './img/Mask2.png';
+import happyClientsIcon from './img/Mask3.png';
+import projectDeliveredIcon from './img/Mask4.png';
+
 const TechnologiesSection = () => {
     const [hoveredTech, setHoveredTech] = useState(null);
+    const [currentTestimonial, setCurrentTestimonial] = useState(0);
   
     // Data for technologies with image paths
     const technologies = {
@@ -63,6 +78,28 @@ const TechnologiesSection = () => {
       ],
     };
   
+    // Testimonials data
+    const testimonials = [
+      {
+        image: clientImage1,
+        text: "Great developer and understanding and very honest person to work with, he will make sure you are happy before taking your money. Worth giving a try to this man, would work again.",
+        name: "Lorem Ipsum",
+        title: "Canada",
+      },
+      {
+        image: clientImage2,
+        text: "Amazing service! The team was professional and delivered beyond my expectations. Highly recommend!",
+        name: "Jane Doe",
+        title: "USA",
+      },
+      {
+        image: clientImage3,
+        text: "Excellent communication and top-notch quality. Will definitely hire again for future projects.",
+        name: "John Smith",
+        title: "UK",
+      },
+    ];
+  
     const handleMouseEnter = (tech) => {
       setHoveredTech(tech);
     };
@@ -71,36 +108,109 @@ const TechnologiesSection = () => {
       setHoveredTech(null);
     };
   
+    const nextTestimonial = () => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    };
+  
+    const prevTestimonial = () => {
+      setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+  
     return (
-      <div className="technologies-section">
-        <h1 className="section-title">Technologies We Work With</h1>
-        <p className="section-description">
-          Our skilled development team uses the newest technology to turn your concepts into amazing apps and software.
-        </p>
-        
-        <div className="tech-categories">
-          {Object.entries(technologies).map(([category, techs]) => (
-            <div key={category} className="tech-category">
-              <h2 className="category-title">{category}</h2>
-              <div className="tech-icons">
-                {techs.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="tech-icon"
-                    onMouseEnter={() => handleMouseEnter(tech)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <img src={tech.icon} alt={tech.name} className="tech-image" />
-                    {hoveredTech && hoveredTech.name === tech.name && (
-                      <div className="tooltip">
-                        {tech.name}
-                      </div>
-                    )}
-                  </div>
-                ))}
+      <div>
+        {/* Technologies Section */}
+        <div className="technologies-section">
+          <h1 className="section-title">Technologies We Work With</h1>
+          <p className="section-description">
+            Our skilled development team uses the newest technology to turn your concepts into amazing apps and software.
+          </p>
+          
+          <div className="tech-categories">
+            {Object.entries(technologies).map(([category, techs]) => (
+              <div key={category} className="tech-category">
+                <h2 className="category-title">{category}</h2>
+                <div className="tech-icons">
+                  {techs.map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="tech-icon"
+                      onMouseEnter={() => handleMouseEnter(tech)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <img src={tech.icon} alt={tech.name} className="tech-image" />
+                      {hoveredTech && hoveredTech.name === tech.name && (
+                        <div className="tooltip">
+                          {tech.name}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Our Journey Section with Full Map Background */}
+        <div 
+          className="journey-section" 
+          style={{ backgroundImage: `url(${mapBackground})` }}
+        >
+          <h1 className="journey-title">Our Journey</h1>
+          <p className="journey-description">
+            A journey is never measured by the miles you have traveled or the path you have taken, but by the marks that you left behind while walking to the destination. Here are the proud marks we left.
+          </p>
+          <div className="journey-stats">
+            <div className="stat-item">
+              <img src={trophyIcon} alt="Years of Excellence" className="stat-icon" />
+              <h2 className="stat-value">2+</h2>
+              <p className="stat-label">Years of Excellence</p>
             </div>
-          ))}
+            <div className="stat-item">
+              <img src={itExpertIcon} alt="IT Expert" className="stat-icon" />
+              <h2 className="stat-value">10+</h2>
+              <p className="stat-label">IT Expert</p>
+            </div>
+            <div className="stat-item">
+              <img src={happyClientsIcon} alt="Happy Clients" className="stat-icon" />
+              <h2 className="stat-value">100+</h2>
+              <p className="stat-label">Happy Clients</p>
+            </div>
+            <div className="stat-item">
+              <img src={projectDeliveredIcon} alt="Project Delivered" className="stat-icon" />
+              <h2 className="stat-value">150+</h2>
+              <p className="stat-label">Project Delivered</p>
+            </div>
+          </div>
+        </div>
+
+        {/* What Our Client Says Section with Slider */}
+        <div className="testimonials-section">
+          <h1 className="testimonials-title">What Our Client Says</h1>
+          <p className="testimonials-description">
+            Our clients send us bunch of smiles with our services and we love them
+          </p>
+          <div className="testimonial-carousel">
+            <div className="carousel-arrow left-arrow" onClick={prevTestimonial}>⟵</div>
+            <div className="testimonial-item">
+              <img src={testimonials[currentTestimonial].image} alt="Client" className="client-image" />
+              <p className="testimonial-text">
+                {testimonials[currentTestimonial].text}
+              </p>
+              <p className="client-name">{testimonials[currentTestimonial].name}</p>
+              <p className="client-title">{testimonials[currentTestimonial].title}</p>
+            </div>
+            <div className="carousel-arrow right-arrow" onClick={nextTestimonial}>⟶</div>
+          </div>
+          <div className="carousel-dots">
+            {testimonials.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${currentTestimonial === index ? 'active' : ''}`}
+                onClick={() => setCurrentTestimonial(index)}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
     );
